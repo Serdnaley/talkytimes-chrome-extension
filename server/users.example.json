@@ -1,0 +1,34 @@
+{
+  "%YOUR_SECRET_TOKEN_1%": {
+    "accounts": [
+      {
+        "email": "your_account_1_here@gmail.com",
+        "password": "your_password_here"
+      },
+      {
+        "email": "your_account_2_here@gmail.com",
+        "password": "your_password_here"
+      },
+      {
+        "email": "your_account_3_here@gmail.com",
+        "password": "your_password_here"
+      }
+    ]
+  },
+  "%YOUR_SECRET_TOKEN_2%": {
+    "accounts": [
+      {
+        "email": "your_account_4_here@gmail.com",
+        "password": "your_password_here"
+      },
+      {
+        "email": "your_account_5_here@gmail.com",
+        "password": "your_password_here"
+      },
+      {
+        "email": "your_account_6_here@gmail.com",
+        "password": "your_password_here"
+      }
+    ]
+  }
+}

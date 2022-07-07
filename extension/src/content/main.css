@@ -1,0 +1,109 @@
+:root {
+  --sidebar-width: 300px;
+}
+
+body > .main-app-content {
+  width: calc(100% - var(--sidebar-width));
+  margin-left: auto;
+}
+
+.main.talkytimes > .container > .row,
+.main.talkytimes > .container > .row > .col-9 {
+  width: 100%;
+  max-width: 100%;
+  flex: none;
+}
+
+[data-target="main-sidebar"] {
+  display: none;
+}
+
+
+.ExtSidebar {
+  width: var(--sidebar-width);
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.ExtSidebarItem {
+  position: relative;
+  color: white;
+  margin: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .1);
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  transform: scale(1);
+  transition: .1s linear;
+}
+
+.ExtSidebarItem--active {
+  background: rgba(41, 41, 199, 0.3);
+}
+
+.ExtSidebarItem:active {
+  transform: scale(.95);
+  transition: 0s;
+}
+
+.ExtSidebarItem--loading:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, .3);
+}
+
+.ExtSidebarItem--loading:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  border: 2px solid white;
+  border-left-color: transparent;
+  border-radius: 50%;
+  z-index: 4;
+  animation: ExtSidebarItem--loading-spin 1s linear infinite;
+}
+
+@keyframes ExtSidebarItem--loading-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.ExtSidebarItem__avatar {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ExtSidebarItem__name {
+  font-size: 18px;
+}
+
+.ExtSidebarItem__email {
+  font-size: 12px;
+}
+
+.ExtSidebarItem__unreads {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .1);
+}
+
+.ExtSidebarItem__unreads--active {
+  background: rgb(168, 0, 0);
+}

@@ -1,0 +1,24 @@
+{
+  "name": "TalkyTimes",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://talkytimes.com/*",
+    "https://api.talkytimes.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "./src/serviceWorker.js",
+    "type": "module"
+  }
+}
